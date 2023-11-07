@@ -1,1 +1,14 @@
-<h1>Hello there!</h1>
+<html>
+    <body>
+        <span id="cid"></span>
+        <span id="lang"></span>
+    </body>
+</html>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const cid = urlParams.get('conversationid');
+    const lang = urlParams.get('language');
+    document.getElementById("cid").innerHTML = cid;
+    document.getElementById("lang").innerHTML = lang;
+</script>
